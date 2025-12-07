@@ -5,14 +5,18 @@
 
 
 def calculateTemperature():
-    # get temperature in celsius from user
-    celsius = float(input("Enter the temperature in Celsius: "))
 
-    # convert celsius to farenheit
-    farenheit = (celsius * 9 / 5) + 32
+    try:
+        # get temperature in celsius from user
+        celsius = float(input("Enter the temperature in Celsius: "))
 
-    # display the temperature in farenheit
-    print("The temperature in Farenheit is: {}°F".format(farenheit))
+        # convert celsius to farenheit
+        farenheit = (celsius * 9 / 5) + 32
+
+        # display the temperature in farenheit
+        print("{} ℃ is equal to {}°F".format(celsius, farenheit))
+    except ValueError:
+        print("Please enter a valid integer")
 
 
 def main():
